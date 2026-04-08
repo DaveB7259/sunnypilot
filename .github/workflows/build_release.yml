@@ -39,7 +39,7 @@ jobs:
         run: |
           set -e
           echo "Starting sunnypilot build..."
-          ./launch_openpilot.sh build || ./tools/release/build_release.sh || true
+          python3 system/manager/build.py
 
       - name: Find release artifact
         id: find_artifact
